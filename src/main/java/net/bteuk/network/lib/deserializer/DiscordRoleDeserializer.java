@@ -23,6 +23,7 @@ public class DiscordRoleDeserializer extends StdDeserializer<DiscordRole> {
 
     @Override
     public DiscordRole deserialize(JsonParser parser, DeserializationContext context) throws IOException {
+
         JsonNode node = parser.getCodec().readTree(parser);
         String uuid = node.get("uuid").asText();
         String role = node.get("role").asText();

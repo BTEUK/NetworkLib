@@ -22,6 +22,7 @@ public class ChatMessageDeserializer extends StdDeserializer<ChatMessage> {
 
     @Override
     public ChatMessage deserialize(JsonParser parser, DeserializationContext context) throws IOException {
+
         JsonNode node = parser.getCodec().readTree(parser);
         String channel = node.get("channel").asText();
         String sender = node.get("sender").asText();

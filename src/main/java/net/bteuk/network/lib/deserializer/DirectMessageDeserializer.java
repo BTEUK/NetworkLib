@@ -22,6 +22,7 @@ public class DirectMessageDeserializer extends StdDeserializer<DirectMessage> {
 
     @Override
     public DirectMessage deserialize(JsonParser parser, DeserializationContext context) throws IOException {
+
         JsonNode node = parser.getCodec().readTree(parser);
         String recipient = node.get("recipient").asText();
         String sender = node.get("sender").asText();
