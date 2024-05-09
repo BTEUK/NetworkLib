@@ -8,7 +8,11 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
  */
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type")
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = DirectMessage.class, name = "CHAT_MESSAGE")
+        @JsonSubTypes.Type(value = ChatMessage.class, name = "CHAT_MESSAGE"),
+        @JsonSubTypes.Type(value = DirectMessage.class, name = "DIRECT_MESSAGE"),
+        @JsonSubTypes.Type(value = DiscordDirectMessage.class, name = "DISCORD_DIRECT_MESSAGE"),
+        @JsonSubTypes.Type(value = DiscordEmbed.class, name = "DISCORD_EMBED"),
+        @JsonSubTypes.Type(value = DiscordLinking.class, name = "DISCORD_LINKING"),
+        @JsonSubTypes.Type(value = DiscordRole.class, name = "DISCORD_ROLE")
 })
-public class AbstractTransferObject {
-}
+public abstract class AbstractTransferObject{}

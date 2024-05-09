@@ -7,8 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @JsonTypeName("DISCORD_DIRECT_MESSAGE")
-//@JsonDeserialize(using = me.bteuk.proxy.socket.deserializers.ChatMessageDeserializer.class)
-//@JsonSerialize(using = ChatMessageSerializer.class)
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter

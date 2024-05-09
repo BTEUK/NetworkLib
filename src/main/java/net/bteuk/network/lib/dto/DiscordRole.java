@@ -9,9 +9,7 @@ import lombok.Setter;
 /**
  * Data transfer object for adding or removing a discord role for a specific player.
  */
-@JsonTypeName("DISCORD_ROLE_UPDATE")
-//@JsonDeserialize(using = me.bteuk.proxy.socket.deserializers.ChatMessageDeserializer.class)
-//@JsonSerialize(using = ChatMessageSerializer.class)
+@JsonTypeName("DISCORD_ROLE")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
