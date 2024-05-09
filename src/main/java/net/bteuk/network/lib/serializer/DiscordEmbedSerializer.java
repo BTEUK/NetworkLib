@@ -1,15 +1,12 @@
 package net.bteuk.network.lib.serializer;
 
 import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import net.bteuk.network.lib.dto.DiscordEmbed;
 import net.bteuk.network.lib.dto.EmbedField;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class DiscordEmbedSerializer extends StdSerializer<DiscordEmbed> {
 
