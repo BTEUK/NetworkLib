@@ -17,6 +17,8 @@ public class DiscordLinking extends AbstractTransferObject {
 
     String token;
 
+    long discordId = -1;
+
     boolean unlink;
 
 }
