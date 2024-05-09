@@ -14,7 +14,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class DiscordRole {
+public class DiscordRole extends AbstractTransferObject {
 
     private String uuid;
 

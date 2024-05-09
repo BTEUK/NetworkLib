@@ -11,7 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class DiscordLinking {
+public class DiscordLinking extends AbstractTransferObject {
 
     String uuid;
 

@@ -12,7 +12,7 @@ import net.bteuk.network.lib.enums.TabEventType;
 @AllArgsConstructor
 @Getter
 @Setter
-public class TabEvent {
+public class TabEvent extends AbstractTransferObject {
 
     private String uuid;
 

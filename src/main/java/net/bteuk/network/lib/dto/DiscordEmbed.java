@@ -36,6 +36,6 @@ public class DiscordEmbed extends AbstractTransferObject {
     /**
      * RGB colour as int.
      */
-    private int colour;
+    private int colour = -1;
 
 }
