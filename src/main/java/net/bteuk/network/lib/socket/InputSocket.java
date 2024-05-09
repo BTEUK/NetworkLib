@@ -26,4 +26,14 @@ public class InputSocket {
             }
         });
     }
+
+    public void close() {
+        if (serverSocket != null && !serverSocket.isClosed()) {
+            try {
+                serverSocket.close();
+            } catch (IOException e) {
+                // Ignored, the server is closing anyway.
+            }
+        }
+    }
 }
