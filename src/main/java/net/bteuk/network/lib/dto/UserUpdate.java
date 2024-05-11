@@ -14,7 +14,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Getter
 @Setter
-public class UserUpdate {
+public class UserUpdate extends AbstractTransferObject {
 
     private String uuid;
 

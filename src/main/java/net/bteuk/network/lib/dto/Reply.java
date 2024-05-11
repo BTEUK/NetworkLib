@@ -21,7 +21,7 @@ import net.kyori.adventure.text.Component;
 @AllArgsConstructor
 @Getter
 @Setter
-public class Reply {
+public class Reply extends AbstractTransferObject {
 
     private Component component;
 }

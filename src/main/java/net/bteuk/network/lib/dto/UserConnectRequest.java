@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import net.bteuk.network.lib.deserializer.UserConnectRequestDeserializer;
 import net.bteuk.network.lib.serializer.UserConnectRequestSerializer;
-import net.kyori.adventure.text.Component;
 
 import java.util.Set;
 
@@ -20,7 +19,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Getter
 @Setter
-public class UserConnectRequest {
+public class UserConnectRequest extends AbstractTransferObject {
 
     private String uuid;
 

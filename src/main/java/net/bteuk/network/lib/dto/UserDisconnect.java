@@ -11,7 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class UserDisconnect {
+public class UserDisconnect extends AbstractTransferObject {
 
     private String uuid;
 

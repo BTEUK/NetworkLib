@@ -11,7 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class UserConnectReply {
+public class UserConnectReply extends AbstractTransferObject {
 
     private String uuid;
 
