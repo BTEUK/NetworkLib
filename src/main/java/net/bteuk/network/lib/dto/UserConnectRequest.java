@@ -26,10 +26,6 @@ public class UserConnectRequest {
 
     private String name;
 
-    private Component tabName;
-
-    private int ping;
-
     private String playerSkin;
 
     private Set<String> channels;
