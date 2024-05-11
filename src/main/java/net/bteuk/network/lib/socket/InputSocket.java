@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.util.concurrent.CompletableFuture;
 
-
 public class InputSocket {
 
     private final int port;

@@ -1,9 +1,10 @@
 package net.bteuk.network.lib.socket;
 
 import net.bteuk.network.lib.dto.AbstractTransferObject;
+import net.bteuk.network.lib.dto.Reply;
 
 public interface SocketHandler {
 
-    void handle(AbstractTransferObject transferObject);
+    Reply handle(AbstractTransferObject transferObject);
 
 }
