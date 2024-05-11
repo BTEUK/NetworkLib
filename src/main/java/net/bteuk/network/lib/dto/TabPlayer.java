@@ -1,26 +1,29 @@
 package net.bteuk.network.lib.dto;
 
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import net.bteuk.network.lib.enums.TabEventType;
 import net.kyori.adventure.text.Component;
 
-import java.util.Set;
-
-@JsonTypeName("TAB_EVENT")
+/**
+ * Tab Player
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class TabEvent extends AbstractTransferObject {
+
+public class TabPlayer {
 
     private String uuid;
 
-    private TabEventType type;
+    private String name;
 
-    private Set<TabPlayer> players;
+    private Component displayName;
+
+    private int ping = -1;
+
+    private String primaryRole;
 
 }

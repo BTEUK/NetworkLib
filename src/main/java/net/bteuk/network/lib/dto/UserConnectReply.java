@@ -27,4 +27,6 @@ public class UserConnectReply {
 
     private boolean tipsEnabled;
 
+    private String primaryRole;
+
 }

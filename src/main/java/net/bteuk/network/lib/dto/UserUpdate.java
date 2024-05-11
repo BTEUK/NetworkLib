@@ -5,22 +5,22 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import net.bteuk.network.lib.enums.TabEventType;
 import net.kyori.adventure.text.Component;
 
 import java.util.Set;
 
-@JsonTypeName("TAB_EVENT")
+@JsonTypeName("USER_UPDATE")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class TabEvent extends AbstractTransferObject {
+public class UserUpdate {
 
     private String uuid;
 
-    private TabEventType type;
+    private Set<String> channels;
 
-    private Set<TabPlayer> players;
+    private Component tabName;
 
+    private int ping = -1;
 }

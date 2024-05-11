@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import net.bteuk.network.lib.deserializer.UserConnectRequestDeserializer;
 import net.bteuk.network.lib.serializer.UserConnectRequestSerializer;
+import net.kyori.adventure.text.Component;
 
 import java.util.Set;
 
@@ -24,6 +25,10 @@ public class UserConnectRequest {
     private String uuid;
 
     private String name;
+
+    private Component tabName;
+
+    private int ping;
 
     private String playerSkin;
 
