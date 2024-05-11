@@ -6,13 +6,17 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@JsonTypeName("PLAYER_DISCONNECT")
+@JsonTypeName("USER_CONNECT_REQUEST")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class PlayerDisconnect {
+public class UserConnectRequest {
 
-    private String player;
+    private String uuid;
+
+    private String name;
+
+    private String player_skin;
 
 }
