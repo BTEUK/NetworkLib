@@ -4,22 +4,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-import java.util.List;
 
 /**
- * A channel event is sent to create/delete a chat channel.
+ * Channel join event, adds/removes a player from a chat channel.
  */
-@JsonTypeName("CHANNEL_EVENT")
+@JsonTypeName("CHANNEL_JOIN")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-@Setter
-public class ChannelEvent {
+public class ChannelJoin {
 
     private String channel;
 
-    private boolean delete;
+    private String uuid;
 
+    private boolean remove;
 }
