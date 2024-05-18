@@ -21,12 +21,19 @@ import java.util.Set;
 @Setter
 public class UserConnectRequest extends AbstractTransferObject {
 
+    /** The server to which the player is connecting. */
+    private String server;
+
+    /** The uuid of the user */
     private String uuid;
 
+    /** The name of the user */
     private String name;
 
+    /** The player skin id */
     private String playerSkin;
 
+    /** All the chat channels to which this user has access. */
     private Set<String> channels;
 
 }

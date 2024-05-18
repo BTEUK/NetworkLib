@@ -21,6 +21,7 @@ public class UserConnectRequestSerializer extends StdSerializer<UserConnectReque
     public void serialize(UserConnectRequest userConnectRequest, JsonGenerator generator, SerializerProvider serializerProvider) throws IOException {
 
         generator.writeStartObject();
+        generator.writeStringField("server", userConnectRequest.getServer());
         generator.writeStringField("uuid", userConnectRequest.getUuid());
         generator.writeStringField("name", userConnectRequest.getName());
         generator.writeStringField("playerSkin", userConnectRequest.getPlayerSkin());

@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import net.kyori.adventure.text.Component;
 
 @JsonTypeName("USER_CONNECT_REPLY")
 @NoArgsConstructor
@@ -14,8 +15,6 @@ import lombok.Setter;
 public class UserConnectReply extends AbstractTransferObject {
 
     private String uuid;
-
-    private boolean reconnect;
 
     private boolean navigatorEnabled;
 

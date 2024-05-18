@@ -24,6 +24,7 @@ public class UserConnectRequestDeserializer extends StdDeserializer<UserConnectR
     public UserConnectRequest deserialize(JsonParser parser, DeserializationContext context) throws IOException {
 
         JsonNode node = parser.getCodec().readTree(parser);
+        String server = node.get("server").asText();
         String uuid = node.get("uuid").asText();
         String name = node.get("name").asText();
         String playerSkin = node.get("playerSkin").asText();
@@ -33,6 +34,6 @@ public class UserConnectRequestDeserializer extends StdDeserializer<UserConnectR
             chatChannels.add(channel.asText());
         }
 
-        return new UserConnectRequest(uuid, name, playerSkin, chatChannels);
+        return new UserConnectRequest(server, uuid, name, playerSkin, chatChannels);
     }
 }
