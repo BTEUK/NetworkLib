@@ -32,7 +32,7 @@ public class AbstractSocketHandler extends Thread {
             AbstractTransferObject object = mapper.readValue(in, AbstractTransferObject.class);
 
             // Handle the different objects.
-            Reply reply = handler.handle(object);
+            AbstractTransferObject reply = handler.handle(object);
 
             // If the reply is not null return it as output.
             if (reply != null) {

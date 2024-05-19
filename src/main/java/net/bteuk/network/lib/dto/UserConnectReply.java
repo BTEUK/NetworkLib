@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import net.kyori.adventure.text.Component;
 
 @JsonTypeName("USER_CONNECT_REPLY")
 @NoArgsConstructor
