@@ -41,7 +41,6 @@ public class UserConnectRequestDeserializer extends StdDeserializer<UserConnectR
         try (JsonParser tabPlayerParser = node.get("tabPlayer").traverse()) {
             tabPlayerParser.setCodec(parser.getCodec());
             tabPlayer = tabPlayerParser.readValueAs(new TypeReference<TabPlayer>() {});
-
         }
 
         return new UserConnectRequest(server, uuid, name, playerSkin, chatChannels, tabPlayer);
