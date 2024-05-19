@@ -38,5 +38,6 @@ public class DiscordEmbedSerializer extends StdSerializer<DiscordEmbed> {
 
         generator.writeStringField("footer", discordEmbed.getFooter());
         generator.writeNumberField("colour", discordEmbed.getColour());
+        generator.writeEndObject();
     }
 }

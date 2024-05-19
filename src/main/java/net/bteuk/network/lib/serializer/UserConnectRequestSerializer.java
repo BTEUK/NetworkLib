@@ -32,5 +32,7 @@ public class UserConnectRequestSerializer extends StdSerializer<UserConnectReque
             generator.writeString(channel);
         }
         generator.writeEndArray();
+        generator.writeObject(userConnectRequest.getTabPlayer());
+        generator.writeEndObject();
     }
 }

@@ -23,5 +23,6 @@ public class ReplySerializer extends StdSerializer<Reply> {
 
         generator.writeStartObject();
         generator.writeStringField("component", GsonComponentSerializer.gson().serialize(reply.getComponent()));
+        generator.writeEndObject();
     }
 }

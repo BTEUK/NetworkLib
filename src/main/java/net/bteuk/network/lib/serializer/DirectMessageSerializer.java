@@ -25,5 +25,6 @@ public class DirectMessageSerializer extends StdSerializer<DirectMessage> {
         generator.writeStringField("recipient", chatMessage.getRecipient());
         generator.writeStringField("sender", chatMessage.getSender());
         generator.writeStringField("component", GsonComponentSerializer.gson().serialize(chatMessage.getComponent()));
+
     }
 }

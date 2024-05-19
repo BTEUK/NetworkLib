@@ -25,5 +25,6 @@ public class ChatMessageSerializer extends StdSerializer<ChatMessage> {
         generator.writeStringField("channel", chatMessage.getChannel());
         generator.writeStringField("sender", chatMessage.getSender());
         generator.writeStringField("component", GsonComponentSerializer.gson().serialize(chatMessage.getComponent()));
+        generator.writeEndObject();
     }
 }
