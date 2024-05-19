@@ -24,10 +24,9 @@ public class TabPlayerSerializer extends StdSerializer<TabPlayer> {
 
         generator.writeStartObject();
         generator.writeStringField("uuid", tabPlayer.getUuid());
-        generator.writeStringField("name", tabPlayer.getName());
-        generator.writeStringField("displayName", GsonComponentSerializer.gson().serialize(tabPlayer.getDisplayName()));
+        generator.writeStringField("name", GsonComponentSerializer.gson().serialize(tabPlayer.getName()));
+        generator.writeStringField("prefix", GsonComponentSerializer.gson().serialize(tabPlayer.getPrefix()));
         generator.writeNumberField("ping", tabPlayer.getPing());
-        generator.writeStringField("primaryRole", tabPlayer.getPrimaryRole());
         generator.writeEndObject();
     }
 }

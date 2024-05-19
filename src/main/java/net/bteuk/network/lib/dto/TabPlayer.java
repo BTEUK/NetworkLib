@@ -23,12 +23,10 @@ public class TabPlayer {
 
     private String uuid;
 
-    private String name;
+    private Component name;
 
-    private Component displayName;
+    private Component prefix;
 
     private int ping = -1;
-
-    private String primaryRole;
 
 }
