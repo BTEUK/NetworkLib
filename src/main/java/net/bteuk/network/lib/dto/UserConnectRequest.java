@@ -36,4 +36,7 @@ public class UserConnectRequest extends AbstractTransferObject {
     /** All the chat channels to which this user has access. */
     private Set<String> channels;
 
+    /** The tab player instance for this user. */
+    private TabPlayer tabPlayer;
+
 }
