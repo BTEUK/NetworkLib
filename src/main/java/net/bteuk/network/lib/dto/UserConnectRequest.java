@@ -39,7 +39,4 @@ public class UserConnectRequest extends AbstractTransferObject {
     /** The tab player instance for this user. */
     private TabPlayer tabPlayer;
 
-    /** The primary group of the player. */
-    private String primaryGroup;
-
 }

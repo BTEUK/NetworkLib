@@ -27,8 +27,8 @@ public class TabPlayer {
 
     private Component prefix;
 
-    /** Weighting of the players' role. */
-    private int weight = 0;
+    /** The primary group of the player. */
+    private String primaryGroup;
 
     private int ping = -1;
 

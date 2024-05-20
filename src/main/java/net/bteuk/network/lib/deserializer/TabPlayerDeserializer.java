@@ -27,8 +27,9 @@ public class TabPlayerDeserializer extends StdDeserializer<TabPlayer> {
         String uuid = node.get("uuid").asText();
         Component name = GsonComponentSerializer.gson().deserialize(node.get("name").asText());
         Component prefix = GsonComponentSerializer.gson().deserialize(node.get("prefix").asText());
+        String primaryGroup = node.get("primaryGroup").asText();
         int ping = node.get("ping").asInt();
 
-        return new TabPlayer(uuid, name, prefix, ping);
+        return new TabPlayer(uuid, name, prefix, primaryGroup, ping);
     }
 }
