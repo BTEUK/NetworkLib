@@ -32,4 +32,15 @@ public class TabPlayer {
 
     private int ping = -1;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o instanceof TabPlayer tabPlayer) {
+            // Compare uuid only.
+            return uuid.equals(tabPlayer.getUuid());
+        }
+        return false;
+    }
 }
