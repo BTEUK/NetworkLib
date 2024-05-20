@@ -23,7 +23,7 @@ public class TabPlayer {
 
     private String uuid;
 
-    private Component name;
+    private String name;
 
     private Component prefix;
 

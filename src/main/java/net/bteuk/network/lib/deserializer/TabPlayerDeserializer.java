@@ -25,7 +25,7 @@ public class TabPlayerDeserializer extends StdDeserializer<TabPlayer> {
 
         JsonNode node = parser.getCodec().readTree(parser);
         String uuid = node.get("uuid").asText();
-        Component name = GsonComponentSerializer.gson().deserialize(node.get("name").asText());
+        String name = node.get("name").asText();
         Component prefix = GsonComponentSerializer.gson().deserialize(node.get("prefix").asText());
         String primaryGroup = node.get("primaryGroup").asText();
         int ping = node.get("ping").asInt();
