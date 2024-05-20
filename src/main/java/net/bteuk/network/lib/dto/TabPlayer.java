@@ -27,6 +27,9 @@ public class TabPlayer {
 
     private Component prefix;
 
+    /** Weighting of the players' role. */
+    private int weight = 0;
+
     private int ping = -1;
 
 }

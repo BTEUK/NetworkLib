@@ -15,11 +15,11 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
         @JsonSubTypes.Type(value = DiscordEmbed.class, name = "DISCORD_EMBED"),
         @JsonSubTypes.Type(value = DiscordLinking.class, name = "DISCORD_LINKING"),
         @JsonSubTypes.Type(value = DiscordRole.class, name = "DISCORD_ROLE"),
-        @JsonSubTypes.Type(value = TabEvent.class, name = "TAB_EVENT"),
         @JsonSubTypes.Type(value = UserConnectRequest.class, name = "USER_CONNECT_REQUEST"),
         @JsonSubTypes.Type(value = UserConnectReply.class, name = "USER_CONNECT_REPLY"),
         @JsonSubTypes.Type(value = UserDisconnect.class, name = "USER_DISCONNECT"),
         @JsonSubTypes.Type(value = UserDisconnect.class, name = "USER_UPDATE"),
-        @JsonSubTypes.Type(value = SwitchServerEvent.class, name = "SWITCH_SERVER_EVENT")
+        @JsonSubTypes.Type(value = SwitchServerEvent.class, name = "SWITCH_SERVER_EVENT"),
+        @JsonSubTypes.Type(value = AddTeamEvent.class, name = "ADD_TEAM_EVENT")
 })
 public abstract class AbstractTransferObject{}
