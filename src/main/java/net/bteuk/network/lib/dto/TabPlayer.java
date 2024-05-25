@@ -21,8 +21,6 @@ public class TabPlayer {
     /** The primary group of the player. */
     private String primaryGroup;
 
-    private int ping = -1;
-
     @Override
     public boolean equals(Object o) {
         if (this == o) {
