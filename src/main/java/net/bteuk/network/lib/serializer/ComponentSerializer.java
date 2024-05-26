@@ -20,6 +20,6 @@ public class ComponentSerializer extends StdSerializer<Component> {
 
     @Override
     public void serialize(Component component, JsonGenerator generator, SerializerProvider serializerProvider) throws IOException {
-        generator.writeStringField("component", GsonComponentSerializer.gson().serialize(component));
+        generator.writeString(GsonComponentSerializer.gson().serialize(component));
     }
 }
