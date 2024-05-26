@@ -30,6 +30,7 @@ public class OutputSocket {
 
         } catch (IOException ex) {
             System.out.println("Could not broadcast message to server socket!");
+            ex.printStackTrace();
         }
     }
 }
