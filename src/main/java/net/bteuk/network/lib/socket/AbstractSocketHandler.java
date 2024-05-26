@@ -1,11 +1,10 @@
 package net.bteuk.network.lib.socket;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import net.bteuk.network.lib.dto.AbstractTransferObject;
-
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.Socket;
+import java.util.stream.Collectors;
 
 public class AbstractSocketHandler extends Thread {
 
@@ -20,14 +19,16 @@ public class AbstractSocketHandler extends Thread {
 
     public void run() {
         try (
-                InputStream input = clientSocket.getInputStream();
+                BufferedReader input = new BufferedReader(
+                        new InputStreamReader(clientSocket.getInputStream()));
         ) {
 
-            ObjectMapper mapper = new ObjectMapper();
-            AbstractTransferObject object = mapper.readValue(input, AbstractTransferObject.class);
+            System.out.println(input.lines().collect(Collectors.toList()));
+            //ObjectMapper mapper = new ObjectMapper();
+            //AbstractTransferObject object = mapper.readValue(input, AbstractTransferObject.class);
 
             // Handle the different objects.
-            handler.handle(object);
+            //handler.handle(object);
 
             // Close the socket;
             clientSocket.close();
