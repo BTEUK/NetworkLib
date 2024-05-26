@@ -5,6 +5,7 @@ import net.bteuk.network.lib.dto.AbstractTransferObject;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
 
@@ -22,13 +23,13 @@ public class OutputSocket {
     public void sendSocketMessage(AbstractTransferObject transferObject) {
         try (
                 Socket socket = new Socket(ip, port);
-                BufferedWriter out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()))
+                OutputStream output = socket.getOutputStream()
         ) {
 
             ObjectMapper mapper = new ObjectMapper();
-            mapper.writeValue(out, transferObject);
+            mapper.writeValue(output, transferObject);
 
-            out.flush();
+            output.flush();
 
         } catch (IOException ex) {
             //LOGGER.severe("Could not broadcast message to server socket!");
