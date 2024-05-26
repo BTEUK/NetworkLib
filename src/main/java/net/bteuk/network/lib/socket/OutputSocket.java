@@ -25,11 +25,11 @@ public class OutputSocket {
         ) {
 
             ObjectMapper mapper = new ObjectMapper();
-            System.out.println(transferObject.toString());
             mapper.writeValue(output, transferObject);
+            output.flush();
 
         } catch (IOException ex) {
-            //LOGGER.severe("Could not broadcast message to server socket!");
+            System.out.println("Could not broadcast message to server socket!");
         }
     }
 }
