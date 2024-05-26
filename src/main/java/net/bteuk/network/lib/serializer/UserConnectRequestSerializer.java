@@ -27,7 +27,6 @@ public class UserConnectRequestSerializer extends StdSerializer<UserConnectReque
         generator.writeStringField("playerSkin", userConnectRequest.getPlayerSkin());
 
         generator.writeArrayFieldStart("channels");
-        generator.writeStartArray();
         for (String channel: userConnectRequest.getChannels()) {
             generator.writeString(channel);
         }

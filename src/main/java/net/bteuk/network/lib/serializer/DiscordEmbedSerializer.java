@@ -28,7 +28,6 @@ public class DiscordEmbedSerializer extends StdSerializer<DiscordEmbed> {
         generator.writeStringField("description", discordEmbed.getDescription());
 
         generator.writeArrayFieldStart("fields");
-        generator.writeStartArray();
         for (EmbedField field: discordEmbed.getFields()) {
             generator.writeStringField("name", field.getName());
             generator.writeStringField("value", field.getValue());
