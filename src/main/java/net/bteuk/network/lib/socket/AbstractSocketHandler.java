@@ -3,7 +3,6 @@ package net.bteuk.network.lib.socket;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import net.bteuk.network.lib.dto.AbstractTransferObject;
 
-import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.Socket;
@@ -21,7 +20,7 @@ public class AbstractSocketHandler extends Thread {
 
     public void run() {
         try (
-                InputStream input = new BufferedInputStream(clientSocket.getInputStream());
+                InputStream input = clientSocket.getInputStream();
         ) {
 
             ObjectMapper mapper = new ObjectMapper();

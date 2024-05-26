@@ -3,7 +3,6 @@ package net.bteuk.network.lib.socket;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import net.bteuk.network.lib.dto.AbstractTransferObject;
 
-import java.io.BufferedOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.Socket;
@@ -22,10 +21,11 @@ public class OutputSocket {
     public void sendSocketMessage(AbstractTransferObject transferObject) {
         try (
                 Socket socket = new Socket(ip, port);
-                OutputStream output = new BufferedOutputStream(socket.getOutputStream())
+                OutputStream output = socket.getOutputStream()
         ) {
 
             ObjectMapper mapper = new ObjectMapper();
+            System.out.println(transferObject.toString());
             mapper.writeValue(output, transferObject);
 
         } catch (IOException ex) {
