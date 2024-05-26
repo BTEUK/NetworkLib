@@ -4,28 +4,24 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
-import net.bteuk.network.lib.dto.Reply;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.serializer.gson.GsonComponentSerializer;
 
 import java.io.IOException;
 
-public class ReplyDeserializer extends StdDeserializer<Reply> {
+public class ComponentDeserializer extends StdDeserializer<Component> {
 
-    public ReplyDeserializer() {
+    public ComponentDeserializer() {
         this(null);
     }
 
-    public ReplyDeserializer(Class<?> vc) {
+    public ComponentDeserializer(Class<?> vc) {
         super(vc);
     }
 
     @Override
-    public Reply deserialize(JsonParser parser, DeserializationContext context) throws IOException {
-
+    public Component deserialize(JsonParser parser, DeserializationContext context) throws IOException {
         JsonNode node = parser.getCodec().readTree(parser);
-        Component component = GsonComponentSerializer.gson().deserialize(node.get("component").asText());
-
-        return new Reply(component);
+        return GsonComponentSerializer.gson().deserialize(node.asText());
     }
 }

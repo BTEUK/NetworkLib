@@ -7,21 +7,21 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import net.bteuk.network.lib.deserializer.ReplyDeserializer;
-import net.bteuk.network.lib.serializer.ReplySerializer;
+import net.bteuk.network.lib.deserializer.ComponentDeserializer;
+import net.bteuk.network.lib.serializer.ComponentSerializer;
 import net.kyori.adventure.text.Component;
 
 /**
  * Generic reply object, contains an optional {@link net.kyori.adventure.text.Component}.
  */
 @JsonTypeName("REPLY")
-@JsonDeserialize(using = ReplyDeserializer.class)
-@JsonSerialize(using = ReplySerializer.class)
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 public class Reply extends AbstractTransferObject {
 
+    @JsonSerialize(using = ComponentSerializer.class)
+    @JsonDeserialize(using = ComponentDeserializer.class)
     private Component component;
 }

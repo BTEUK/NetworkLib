@@ -7,13 +7,11 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import net.bteuk.network.lib.deserializer.DirectMessageDeserializer;
-import net.bteuk.network.lib.serializer.DirectMessageSerializer;
+import net.bteuk.network.lib.deserializer.ComponentDeserializer;
+import net.bteuk.network.lib.serializer.ComponentSerializer;
 import net.kyori.adventure.text.Component;
 
 @JsonTypeName("DIRECT_MESSAGE")
-@JsonDeserialize(using = DirectMessageDeserializer.class)
-@JsonSerialize(using = DirectMessageSerializer.class)
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -24,6 +22,8 @@ public class DirectMessage extends AbstractTransferObject {
 
     private String sender;
 
+    @JsonSerialize(using = ComponentSerializer.class)
+    @JsonDeserialize(using = ComponentDeserializer.class)
     private Component component;
 
 }
