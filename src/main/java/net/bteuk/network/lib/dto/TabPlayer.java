@@ -22,6 +22,9 @@ public class TabPlayer {
     private String uuid;
 
     private String name;
+    
+    /** The primary group of the player. */
+    private String primaryGroup;
 
     /** The prefix of the player. */
     @JsonSerialize(using = ComponentSerializer.class)
