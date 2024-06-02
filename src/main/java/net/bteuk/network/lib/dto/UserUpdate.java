@@ -1,10 +1,14 @@
 package net.bteuk.network.lib.dto;
 
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import net.bteuk.network.lib.deserializer.ComponentDeserializer;
+import net.bteuk.network.lib.serializer.ComponentSerializer;
 import net.kyori.adventure.text.Component;
 
 import java.util.Set;
@@ -20,6 +24,8 @@ public class UserUpdate extends AbstractTransferObject {
 
     private Set<String> channels;
 
+    @JsonSerialize(using = ComponentSerializer.class)
+    @JsonDeserialize(using = ComponentDeserializer.class)
     private Component tabName;
 
     private int ping = -1;
