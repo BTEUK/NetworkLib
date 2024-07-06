@@ -24,9 +24,7 @@ public class UserUpdate extends AbstractTransferObject {
 
     private Set<String> channels;
 
-    private boolean afk;
+    private Boolean afk;
 
     private TabPlayer tabPlayer;
-
-    private int ping = -1;
 }
