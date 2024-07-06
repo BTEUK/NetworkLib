@@ -24,9 +24,9 @@ public class UserUpdate extends AbstractTransferObject {
 
     private Set<String> channels;
 
-    @JsonSerialize(using = ComponentSerializer.class)
-    @JsonDeserialize(using = ComponentDeserializer.class)
-    private Component tabName;
+    private boolean afk;
+
+    private TabPlayer tabPlayer;
 
     private int ping = -1;
 }
