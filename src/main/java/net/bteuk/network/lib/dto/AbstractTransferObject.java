@@ -18,8 +18,8 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
         @JsonSubTypes.Type(value = UserConnectRequest.class, name = "USER_CONNECT_REQUEST"),
         @JsonSubTypes.Type(value = UserConnectReply.class, name = "USER_CONNECT_REPLY"),
         @JsonSubTypes.Type(value = UserDisconnect.class, name = "USER_DISCONNECT"),
-        @JsonSubTypes.Type(value = UserDisconnect.class, name = "USER_REMOVE"),
-        @JsonSubTypes.Type(value = UserDisconnect.class, name = "USER_UPDATE"),
+        @JsonSubTypes.Type(value = UserRemove.class, name = "USER_REMOVE"),
+        @JsonSubTypes.Type(value = UserUpdate.class, name = "USER_UPDATE"),
         @JsonSubTypes.Type(value = SwitchServerEvent.class, name = "SWITCH_SERVER_EVENT"),
         @JsonSubTypes.Type(value = AddTeamEvent.class, name = "ADD_TEAM_EVENT"),
         @JsonSubTypes.Type(value = MuteEvent.class, name = "MUTE_EVENT")
