@@ -26,6 +26,8 @@ public class TabPlayer {
     /** The primary group of the player. */
     private String primaryGroup;
 
+    private int ping;
+
     /** The prefix of the player. */
     @JsonSerialize(using = ComponentSerializer.class)
     @JsonDeserialize(using = ComponentDeserializer.class)
