@@ -27,6 +27,9 @@ public class UserConnectRequest extends AbstractTransferObject {
     /** The player skin id */
     private String playerSkin;
 
+    /** The ping of the player */
+    private int ping;
+
     /** All the chat channels to which this user has access. */
     private Set<String> channels;
 
