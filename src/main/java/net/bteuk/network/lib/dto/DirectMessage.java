@@ -26,4 +26,7 @@ public class DirectMessage extends AbstractTransferObject {
     @JsonDeserialize(using = ComponentDeserializer.class)
     private Component component;
 
+    /** Whether the message should also be sent if the player is offline. */
+    private boolean offline = false;
+
 }
