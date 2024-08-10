@@ -33,4 +33,7 @@ public class UserConnectRequest extends AbstractTransferObject {
     /** The tab player instance for this user. */
     private TabPlayer tabPlayer;
 
+    /** Indicates whether the user is a reviewer. */
+    private boolean reviewer;
+
 }
