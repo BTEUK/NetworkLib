@@ -36,6 +36,7 @@ public class UserConnectReply extends AbstractTransferObject {
     @JsonDeserialize(using = ComponentListDeserializer.class)
     private List<Component> messages;
 
-    private Event joinEvent;
+    // Not yet used.
+//    private Event joinEvent;
 
 }
