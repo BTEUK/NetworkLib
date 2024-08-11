@@ -13,6 +13,7 @@ import net.bteuk.network.lib.serializer.ComponentSerializer;
 import net.kyori.adventure.text.Component;
 
 @JsonTypeName("DIRECT_MESSAGE")
+@NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
