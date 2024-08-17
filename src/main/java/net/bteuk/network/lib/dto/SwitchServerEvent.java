@@ -19,4 +19,7 @@ public class SwitchServerEvent extends AbstractTransferObject {
 
     private String from_server;
 
+    /** Included here since the disconnect event is cancelled when switching server, but we still need the info. */
+    private UserDisconnect userDisconnect;
+
 }

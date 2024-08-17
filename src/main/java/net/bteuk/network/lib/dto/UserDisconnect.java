@@ -15,6 +15,12 @@ public class UserDisconnect extends AbstractTransferObject {
 
     private String uuid;
 
+    /**
+     * Check the server, since for server-switching the connect event is sent before the disconnect, then we can ignore the disconnect.
+     * To update the user information we send a UserDisconnect event in the SwitchServer object.
+     */
+    private String server;
+
     private boolean navigatorEnabled;
 
     private boolean teleportEnabled;
