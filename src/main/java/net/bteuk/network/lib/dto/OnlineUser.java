@@ -15,4 +15,19 @@ public class OnlineUser {
 
     private String name;
 
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (other instanceof OnlineUser onlineUser) {
+            return this.uuid.equals(onlineUser.uuid);
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return uuid.hashCode();
+    }
 }
