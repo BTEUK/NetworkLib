@@ -15,6 +15,8 @@ public class OnlineUser {
 
     private String name;
 
+    private String server;
+
     @Override
     public boolean equals(Object other) {
         if (this == other) {
