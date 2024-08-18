@@ -6,7 +6,6 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import net.bteuk.network.lib.deserializer.ComponentDeserializer;
 import net.bteuk.network.lib.serializer.ComponentSerializer;
@@ -18,6 +17,8 @@ import net.kyori.adventure.text.Component;
 @Getter
 @Setter
 public class DirectMessage extends AbstractTransferObject {
+
+    private String channel;
 
     private String recipient;
 
