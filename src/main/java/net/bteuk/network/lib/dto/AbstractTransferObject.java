@@ -26,6 +26,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
         @JsonSubTypes.Type(value = OnlineUsersRequest.class, name = "ONLINE_USERS_REQUEST"),
         @JsonSubTypes.Type(value = OnlineUsersReply.class, name = "ONLINE_USERS_REPLY"),
         @JsonSubTypes.Type(value = OnlineUserAdd.class, name = "ONLINE_USER_ADD"),
-        @JsonSubTypes.Type(value = OnlineUserRemove.class, name = "ONLINE_USER_REMOVE")
+        @JsonSubTypes.Type(value = OnlineUserRemove.class, name = "ONLINE_USER_REMOVE"),
+        @JsonSubTypes.Type(value = OnlineUserRemove.class, name = "MODERATION_EVENT"),
 })
 public abstract class AbstractTransferObject{}
