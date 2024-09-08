@@ -21,14 +21,14 @@ public class UserDisconnect extends AbstractTransferObject {
      */
     private String server;
 
-    private boolean navigatorEnabled;
+    private Boolean navigatorEnabled;
 
-    private boolean teleportEnabled;
+    private Boolean teleportEnabled;
 
-    private boolean nightvisionEnabled;
+    private Boolean nightvisionEnabled;
 
     private String chatChannel;
 
-    private boolean tipsEnabled;
+    private Boolean tipsEnabled;
 
 }
