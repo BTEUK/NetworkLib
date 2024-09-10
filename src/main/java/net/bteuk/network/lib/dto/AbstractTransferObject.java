@@ -23,11 +23,12 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
         @JsonSubTypes.Type(value = SwitchServerEvent.class, name = "SWITCH_SERVER_EVENT"),
         @JsonSubTypes.Type(value = AddTeamEvent.class, name = "ADD_TEAM_EVENT"),
         @JsonSubTypes.Type(value = MuteEvent.class, name = "MUTE_EVENT"),
-        @JsonSubTypes.Type(value = OnlineUsersRequest.class, name = "ONLINE_USERS_REQUEST"),
         @JsonSubTypes.Type(value = OnlineUsersReply.class, name = "ONLINE_USERS_REPLY"),
         @JsonSubTypes.Type(value = OnlineUserAdd.class, name = "ONLINE_USER_ADD"),
         @JsonSubTypes.Type(value = OnlineUserRemove.class, name = "ONLINE_USER_REMOVE"),
         @JsonSubTypes.Type(value = OnlineUserRemove.class, name = "MODERATION_EVENT"),
-        @JsonSubTypes.Type(value = FocusEvent.class, name = "FOCUS_EVENT")
+        @JsonSubTypes.Type(value = FocusEvent.class, name = "FOCUS_EVENT"),
+        @JsonSubTypes.Type(value = ServerStartup.class, name = "SERVER_STARTUP"),
+        @JsonSubTypes.Type(value = ServerShutdown.class, name = "SERVER_SHUTDOWN")
 })
 public abstract class AbstractTransferObject{}
