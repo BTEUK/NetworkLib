@@ -18,7 +18,7 @@ public class OutputSocket {
         this.port = port;
     }
 
-    public void sendSocketMessage(AbstractTransferObject transferObject) {
+    public boolean sendSocketMessage(AbstractTransferObject transferObject) {
         try (
                 Socket socket = new Socket(ip, port);
                 OutputStream output = socket.getOutputStream()
@@ -30,7 +30,8 @@ public class OutputSocket {
 
         } catch (IOException ex) {
             System.out.println("Could not broadcast message to server socket!");
-            ex.printStackTrace();
+            return false;
         }
+        return true;
     }
 }
