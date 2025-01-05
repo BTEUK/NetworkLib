@@ -14,9 +14,13 @@ public class Reviewing {
      * @param reputation the reputation of the player
      * @return a list of plot difficulties
      */
-    public static List<PlotDifficulties> getAvailablePlotDifficulties(boolean isReviewer, double reputation) {
+    public static List<PlotDifficulties> getAvailablePlotDifficulties(boolean isArchitect, boolean isReviewer, double reputation) {
 
         List<PlotDifficulties> difficulties = new ArrayList<>();
+
+        if (!isArchitect && !isReviewer) {
+            return difficulties;
+        }
 
         // Hard plots can only be reviewed by reviewers with at least 5 reputation.
         if (reputation >= 5 && isReviewer) {
