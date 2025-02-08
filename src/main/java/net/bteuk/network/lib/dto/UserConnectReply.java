@@ -38,8 +38,6 @@ public class UserConnectReply extends AbstractTransferObject {
 
     private boolean focusEnabled;
 
-    private Double reviewerReputation;
-
     // Not yet used.
 //    private Event joinEvent;
 
