@@ -15,4 +15,6 @@ public class PlotMessage extends AbstractTransferObject {
 
     private String messageTemplate;
 
+    private boolean verify;
+
 }
