@@ -55,6 +55,18 @@ public class ChatUtils {
         return varMessage(NamedTextColor.GREEN, NamedTextColor.DARK_AQUA, message, vars);
     }
 
+    /**
+     * Create a success message with vars.
+     * The colour of the message is GREEN, while each var is its own {@link Component}.
+     *
+     * @param message the message, using %s as placeholder for the vars.
+     * @param vars the vars to add to the placeholders, must equal the number of placeholder symbols.
+     * @return the {@link Component} with the message, or null if the number of vars is incorrect.
+     */
+    public static Component success(String message, Component... vars) {
+        return varMessage(NamedTextColor.GREEN, message, vars);
+    }
+
     private static Component varMessage(NamedTextColor textColour, NamedTextColor varColour, String message, String... vars) {
         Component component = Component.empty();
         // Find the number of vars needed.
@@ -68,6 +80,30 @@ public class ChatUtils {
             }
             if (count < vars.length) {
                 component = component.append(colouredText(varColour, vars[count]));
+                count++;
+            }
+            lastIdx = idx + 2;
+        }
+        // At the remaining text if exists.
+        if (lastIdx < message.length()) {
+            component = component.append(colouredText(textColour, message.substring(lastIdx)));
+        }
+        return component;
+    }
+
+    private static Component varMessage(NamedTextColor textColour, String message, Component... vars) {
+        Component component = Component.empty();
+        // Find the number of vars needed.
+        int lastIdx = 0;
+        int count = 0;
+        Matcher matcher = PATTERN.matcher(message);
+        while (matcher.find()) {
+            int idx = matcher.start();
+            if (idx != lastIdx) {
+                component = component.append(colouredText(textColour, message.substring(lastIdx, idx)));
+            }
+            if (count < vars.length) {
+                component = component.append(vars[count]);
                 count++;
             }
             lastIdx = idx + 2;
