@@ -11,16 +11,18 @@ import net.bteuk.network.lib.deserializer.ComponentDeserializer;
 import net.bteuk.network.lib.serializer.ComponentSerializer;
 import net.kyori.adventure.text.Component;
 
-@JsonTypeName("REPLY_MESSAGE")
+@JsonTypeName("PRIVATE_MESSAGE")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class ReplyMessage extends AbstractTransferObject {
+public class PrivateMessage extends AbstractTransferObject {
 
     private String channel;
 
     private String sender;
+
+    private String recipient;
 
     private String message;
 

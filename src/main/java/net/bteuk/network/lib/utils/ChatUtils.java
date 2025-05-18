@@ -67,6 +67,21 @@ public class ChatUtils {
         return varMessage(NamedTextColor.GREEN, message, vars);
     }
 
+    public static Component directMessage(String to, String from, String message) {
+        return ChatUtils.line("[").decorate(TextDecoration.BOLD)
+                .append(ChatUtils.line(from))
+                .append(Component.space())
+                .append(ChatUtils.line("->"))
+                .append(Component.space())
+                .append(ChatUtils.line(to))
+                .append(ChatUtils.line("]").decorate(TextDecoration.BOLD))
+                .append(Component.space())
+                .append(Component.text(">", NamedTextColor.GRAY).decorate(TextDecoration.BOLD)) // Arrow between the
+                // player and message in bold.
+                .append(Component.space())
+                .append(ChatUtils.line(message)); // The message in white without formatting.
+    }
+
     private static Component varMessage(NamedTextColor textColour, NamedTextColor varColour, String message, String... vars) {
         Component component = Component.empty();
         // Find the number of vars needed.
