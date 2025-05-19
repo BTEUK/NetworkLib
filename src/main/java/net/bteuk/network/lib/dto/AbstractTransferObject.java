@@ -30,6 +30,8 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
         @JsonSubTypes.Type(value = FocusEvent.class, name = "FOCUS_EVENT"),
         @JsonSubTypes.Type(value = ServerStartup.class, name = "SERVER_STARTUP"),
         @JsonSubTypes.Type(value = ServerShutdown.class, name = "SERVER_SHUTDOWN"),
-        @JsonSubTypes.Type(value = PlotMessage.class, name = "PLOT_MESSAGE")
+        @JsonSubTypes.Type(value = PlotMessage.class, name = "PLOT_MESSAGE"),
+        @JsonSubTypes.Type(value = PrivateMessage.class, name = "PRIVATE_MESSAGE"),
+        @JsonSubTypes.Type(value = ReplyMessage.class, name = "REPLY_MESSAGE")
 })
 public abstract class AbstractTransferObject{}
