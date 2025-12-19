@@ -27,4 +27,8 @@ public class UserUpdate extends AbstractTransferObject {
     private Boolean afk;
 
     private TabPlayer tabPlayer;
+
+    @JsonSerialize(using = ComponentSerializer.class)
+    @JsonDeserialize(using = ComponentDeserializer.class)
+    private Component displayName;
 }
