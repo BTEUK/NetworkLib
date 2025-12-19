@@ -7,8 +7,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import net.bteuk.network.lib.deserializer.ComponentDeserializer;
 import net.bteuk.network.lib.deserializer.ComponentListDeserializer;
 import net.bteuk.network.lib.serializer.ComponentListSerializer;
+import net.bteuk.network.lib.serializer.ComponentSerializer;
 import net.kyori.adventure.text.Component;
 
 import java.util.List;
@@ -37,6 +39,10 @@ public class UserConnectReply extends AbstractTransferObject {
     private List<Component> messages;
 
     private boolean focusEnabled;
+
+    @JsonSerialize(using = ComponentSerializer.class)
+    @JsonDeserialize(using = ComponentDeserializer.class)
+    private Component displayName;
 
     // Not yet used.
 //    private Event joinEvent;
