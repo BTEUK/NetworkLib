@@ -33,7 +33,8 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
     @JsonSubTypes.Type(value = PlotMessage.class, name = "PLOT_MESSAGE"),
     @JsonSubTypes.Type(value = PrivateMessage.class, name = "PRIVATE_MESSAGE"),
     @JsonSubTypes.Type(value = ReplyMessage.class, name = "REPLY_MESSAGE"),
-    @JsonSubTypes.Type(value = TeleportEvent.class, name = "TELEPORT_EVENT")
+    @JsonSubTypes.Type(value = TeleportEvent.class, name = "TELEPORT_EVENT"),
+    @JsonSubTypes.Type(value = ProxyStart.class, name = "PROXY_START")
 })
 public abstract class AbstractTransferObject {
 }
