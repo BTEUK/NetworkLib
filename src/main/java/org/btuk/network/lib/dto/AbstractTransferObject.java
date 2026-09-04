@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
  * Generic transfer object sent through the socket.
  */
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type")
-@JsonSubTypes({
+@JsonSubTypes(value = {
     @JsonSubTypes.Type(value = Reply.class, name = "REPLY"),
     @JsonSubTypes.Type(value = ChatMessage.class, name = "CHAT_MESSAGE"),
     @JsonSubTypes.Type(value = DirectMessage.class, name = "DIRECT_MESSAGE"),
@@ -34,7 +34,8 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
     @JsonSubTypes.Type(value = PrivateMessage.class, name = "PRIVATE_MESSAGE"),
     @JsonSubTypes.Type(value = ReplyMessage.class, name = "REPLY_MESSAGE"),
     @JsonSubTypes.Type(value = TeleportEvent.class, name = "TELEPORT_EVENT"),
-    @JsonSubTypes.Type(value = ProxyStart.class, name = "PROXY_START")
+    @JsonSubTypes.Type(value = ProxyStart.class, name = "PROXY_START"),
+    @JsonSubTypes.Type(value = RegionRequestEvent.class, name = "REGION_REQUEST_EVENT")
 })
 public abstract class AbstractTransferObject {
 }
