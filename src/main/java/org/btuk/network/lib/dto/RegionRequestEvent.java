@@ -17,7 +17,9 @@ public class RegionRequestEvent extends AbstractTransferObject {
 
     private String regionName;
 
-    private String uuid;
+    private String reviewerUuid;
+
+    private String requesterUuid;
 
     private boolean staffReview;
 
